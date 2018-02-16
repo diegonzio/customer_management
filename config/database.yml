@@ -1,4 +1,4 @@
-# MySQL. Versions 5.1.10 and up are supported.
+# MySQL. Versions 5.0 and up are supported.
 #
 # Install the MySQL driver
 #   gem install mysql2
@@ -12,13 +12,19 @@
 default: &default
   adapter: mysql2
   encoding: utf8
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  pool: 5
   username: root
   password:
   host: localhost
 
 development:
   <<: *default
+  socket: <%=
+              ['/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock',
+               '/opt/local/var/run/mysql5/mysqld.sock',
+               '/opt/local/var/run/mysqld/mysqld.sock',
+               '/var/run/mysqld/mysqld.sock',
+               '/tmp/mysql.sock'].select { |f| File.exist? f }.first %>
   database: customer_management_development
 
 # Warning: The database defined as "test" will be erased and
@@ -51,4 +57,4 @@ production:
   <<: *default
   database: customer_management_production
   username: customer_management
-  password: <%= ENV['CUSTOMER_MANAGEMENT_DATABASE_PASSWORD'] %>
+  password: <%= ENV['CUSTOMER-MANAGEMENT_DATABASE_PASSWORD'] %>
