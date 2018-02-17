@@ -1,0 +1,31 @@
+<div class="panel panel-default">
+  <div class="panel-heading" style="display: flow-root;">
+    <div class="pull-left">
+      <h4>Clientes</h4>
+    </div>
+    <div class="btn-group pull-right">
+      <%= link_to new_client_path, class: "btn btn-primary fileinput-button font-white" do %>
+        Crear Cliente
+      <%end%>
+    </div>
+  </div>
+  <div class="panel-body">
+    <table id="datatable" class="table table-striped table-hover datatable_table" data-source="<%= clients_path(format: :json) %>" cellspacing="0">
+      <thead>
+      <tr>
+        <td>
+          id
+        </td>
+        <td>
+          Nombre
+        </td>
+        <td>
+          Acciones
+        </td>
+      </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+</div>

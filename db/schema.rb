@@ -10,7 +10,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180216230609) do
+ActiveRecord::Schema.define(version: 20180217010334) do
+
+  create_table "clients", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "lastname"
+    t.string "phone_1"
+    t.string "phone_2"
+    t.string "email"
+    t.string "responsable_id"
+    t.bigint "position_id"
+    t.bigint "software_id"
+    t.bigint "estate_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["estate_id"], name: "index_clients_on_estate_id"
+    t.index ["position_id"], name: "index_clients_on_position_id"
+    t.index ["software_id"], name: "index_clients_on_software_id"
+  end
+
+  create_table "estates", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "web"
+    t.string "address"
+    t.string "phone_1"
+    t.string "phone_2"
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "positions", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "softwares", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+    t.string "name"
+    t.string "state"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
@@ -29,4 +71,7 @@ ActiveRecord::Schema.define(version: 20180216230609) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "clients", "estates"
+  add_foreign_key "clients", "positions"
+  add_foreign_key "clients", "softwares"
 end

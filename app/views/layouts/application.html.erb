@@ -1,14 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CustomerManagement</title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+	<head>
+		<title>Gestión</title>
+		<%= Gon::Base.render_data %>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+	<body class="page-header-fixed page-sidebar-closed-hide-logo page-content-white page-md">
+		<div class="page-wrapper">
+			<!-- HEADER -->
+			<%= render 'partials/header' %>
+			<!-- END HEADER -->
+			<div class="clearfix"> </div>
+			<!-- CONTAINER -->
+			<div class="page-container">
+				<!-- SIDEBAR -->
+				<%= render 'partials/menu' %>
+				<!-- END SIDEBAR -->
+				<div class="page-content-wrapper">
+					<div class="page-content clearfix">
+					
+						<div class="page-bar">
+							<div class="col-md-12">
+								<%= render "partials/breadcrumb" %>
+							</div>
+						</div>
+						<%= yield %>
+					</div>
+				</div>
+			</div>
+			<!-- FOOTER -->
+			<%= render 'partials/footer' %>
+			<!-- END FOOTER -->
+		</div>
+	</body>
 </html>

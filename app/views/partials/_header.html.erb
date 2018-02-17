@@ -1,0 +1,38 @@
+<div class="page-header navbar navbar-fixed-top">
+	<div class="page-header-inner ">
+		<!-- LOGO -->
+		<div class="page-logo">
+			<%= link_to root_path do %>
+				
+			<%end%>
+			<div class="menu-toggler sidebar-toggler">
+				<span></span>
+			</div>
+		</div>
+		<!-- END LOGO -->
+		<!-- BUTTON MENU -->
+		<a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+			<span></span>
+		</a>
+		<!-- END BUTTON MENU -->
+		<!-- TOP MENU -->
+		<div class="top-menu">
+			<ul class="nav navbar-nav pull-right">
+				<!-- NOTIFICATIONS -->
+				<% render 'partials/notifications' %>
+				<!-- END NOTIFICATIONS -->
+				<!-- USER LOGIN DROPDOWN -->
+				<li class="dropdown dropdown-user">
+				
+					<ul class="dropdown-menu dropdown-menu-default">
+						<li>
+							<%= link_to destroy_user_session_path, method: :delete do %><i class="fal fa-key"></i> Cerrar Sesión<% end %>
+						</li>
+					</ul>
+				</li>
+				<!-- END USER -->
+			</ul>
+		</div>
+		<!-- END TOP MENU -->
+	</div>
+</div>

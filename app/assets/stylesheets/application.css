@@ -2,14 +2,30 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap/bootstrap
+ *= require metronic/layout
+ *= require metronic/light2
+ *= require metronic/components-md
+ *= require metronic/plugins-md
+ *= require fontawesome/font-awesome-core
+ *= require fontawesome/font-awesome-light
+ *= require fontawesome/font-awesome-regular
+ *= require fontawesome/font-awesome-solid
+ *= require dataTables/dataTables.bootstrap4
+ *= require dataTables/responsive.bootstrap4
+ *= require sweetalert
+ *= require bootstrap-datetimepicker
+ *= require bootstrap-datepicker.min
+ *= require select2/select2
+ *= require select2/select2-bootstrap
  *= require_tree .
  *= require_self
  */

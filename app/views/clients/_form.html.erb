@@ -1,0 +1,85 @@
+<div class="col-md-12">
+	<h1 class="page-title">
+	Clientes
+	<small></small>
+	</h1>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="well">
+		<%= form_for @client, html: {class:"",id: "item_form" } do |f| %>
+			<div class="form-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Nombre</label>
+							<%= f.text_field :name, class: "form-control" %>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Apellido</label>
+							<%= f.text_field :lastname, class: "form-control" %>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Telefono 1</label>
+							<%= f.text_field :phone_1, class: "form-control" %>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Telefono 2</label>
+							<%= f.text_field :phone_2, class: "form-control" %>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Email</label>
+							<%= f.text_field :email, class: "form-control" %>
+						</div>
+					</div>
+					<div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Responsable</label>
+							<%= f.collection_select :responsable_id, User.all, :id, :id, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
+						</div>
+                    </div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Posición</label>
+							<%= f.collection_select :position_id, Position.all, :id, :name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
+						</div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Software</label>
+							<%= f.collection_select :software_id, Software.all, :id, :name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
+						</div>
+                    </div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Inmobiliaria</label>
+							<%= f.collection_select :estate_id, Estate.all, :id, :name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
+						</div>
+                    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-9 col-md-3 text-right">
+					<%= f.submit "Guardar", class:"btn btn-success" %>
+				</div>
+			</div>
+		<%end%>
+		</div>
+	</div>
+</div>

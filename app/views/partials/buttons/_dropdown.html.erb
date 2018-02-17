@@ -1,0 +1,25 @@
+<div class="btn-group pull-right">
+    <a class="btn btn-success green dropdown-toggle" href="javascript:;" data-toggle="dropdown" aria-expanded="false">
+			Acciones &nbsp<span class="fal fa-angle-down"></span>
+    </a>
+    <ul class="dropdown-menu pull-right">
+        <li>
+					<a class="btn_ver" data-id="<%= dimension.id %>" data-toggle="modal" data-target="#modal-request-element" href="javascript:;">
+						<span class="fal fa-stethoscope"></span> Diagnosticar
+					</a>
+				</li>
+        <li>
+					<% if [1,3].include? dimension.element_state.id %>
+					  <% if dimension.element_state.id == 3 %>
+  					  <a class="btn_postpone" data-id="<%= dimension.id %>" data-state="1" data-toggle="modal" data-target="#modal-postpone-element" href="javascript:;">
+    						<span class="fal fa-stopwatch"></span> Posponer
+    					</a>
+  					<% else %>
+  						<a class="btn_postpone" data-id="<%= dimension.id %>" data-state="0" data-toggle="modal" data-target="#modal-postpone-element" href="javascript:;">
+  							<span class="fal fa-stopwatch"></span> Reactivar
+  						</a>
+  					<% end %>
+					<% end %>
+        </li>
+    </ul>
+</div>

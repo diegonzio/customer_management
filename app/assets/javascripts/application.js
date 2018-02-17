@@ -10,6 +10,24 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require rails-ujs
+//= require jquery
+//= require jquery_ujs
 //= require turbolinks
+//= require dataTables/jquery.dataTables
+//= require dataTables/jquery.dataTables.yadcf
+//= require dataTables/dataTables.bootstrap4
+//= require dataTables/dataTables.responsive
+//= require dataTables/responsive.bootstrap4
+//= require bootstrap/bootstrap
+//= require moment
+//= require backstretch/jquery.backstretch
+//= require fontawesome/packs/light
+//= require fontawesome/fontawesome
+//= require bootstrap-datepicker.min
+//= require bootstrap-datepicker.es
+//= require metronic/app
+//= require metronic/layout
+//= require bootstrap-datetimepicker
+//= require sweetalert.min
+//= require select2/select2.full
 //= require_tree .

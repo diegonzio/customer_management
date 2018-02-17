@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GestiónClientes</title>
+		<%= csrf_meta_tags %>
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= stylesheet_link_tag    'metronic/login', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_include_tag 'metronic/login', 'data-turbolinks-track': 'reload' %>
+	</head>
+	<body class="login">
+		<div class="page-wrapper">
+			<!-- CONTAINER -->
+			<div class="page-container">
+				<%= yield %>
+			</div>
+		</div>
+	</body>
+</html>
