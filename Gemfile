@@ -51,7 +51,6 @@ gem 'wkhtmltopdf-binary'
 #Gestión de Permisos
 gem 'cancancan'
 #Bootstrap
-gem 'bootstrap3-datetimepicker-rails', '= 4.17.37'
 #Variables de Rails en JS
 gem 'gon'
 #Configuraciones
@@ -62,8 +61,6 @@ gem 'httparty'
 gem 'sidekiq'
 gem 'simple_form'
 gem 'faker'
-gem 'fullcalendar-rails'
-gem 'momentjs-rails'
 gem 'bootstrap-sass'
 
 group :development, :test do

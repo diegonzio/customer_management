@@ -2,6 +2,7 @@ class ClientsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_client, only:[:show, :update, :destroy, :edit]
 	def index
+		add_breadcrumb "Clientes", :clients_path
 		respond_to do |format|
 			data = ['name']
 			sort = %w[id name id]
@@ -10,6 +11,7 @@ class ClientsController < ApplicationController
 		end
 	end
 	def new
+		add_breadcrumb "Nuevo Cliente", :new_client_path
 		@client = Client.new
 	end
 	def create
@@ -23,6 +25,7 @@ class ClientsController < ApplicationController
 	def show
 	end
 	def edit
+		add_breadcrumb "Editar Cliente", :new_client_path
 	end
 	def update
 		if @client.update(client_params)

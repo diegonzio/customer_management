@@ -41,8 +41,7 @@ ActiveRecord::Schema.define(version: 20180218190204) do
   end
 
   create_table "events", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
-    t.text "title"
-    t.datetime "date_range"
+    t.string "title"
     t.datetime "start"
     t.datetime "end"
     t.string "color"

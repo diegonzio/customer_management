@@ -2,6 +2,7 @@ class EstatesController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_estate, only:[:show, :update, :destroy, :edit]
 	def index
+		add_breadcrumb "Inmobiliarias", :estates_path
 		respond_to do |format|
 			data = ['name']
 			sort = %w[id name id]
@@ -10,6 +11,7 @@ class EstatesController < ApplicationController
 		end
 	end
 	def new
+		add_breadcrumb "Nueva Inmobiliaria", :new_estate_path
 		@estate = Estate.new
 	end
 	def create
@@ -23,6 +25,7 @@ class EstatesController < ApplicationController
 	def show
 	end
 	def edit
+		add_breadcrumb "Editar Inmobiliaria", :edit_estate_path
 	end
 	def update
 		if @estate.update(estate_params)

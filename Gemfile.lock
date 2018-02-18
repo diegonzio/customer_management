@@ -50,8 +50,6 @@ GEM
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    bootstrap3-datetimepicker-rails (4.17.37)
-      momentjs-rails (>= 2.8.1)
     breadcrumbs_on_rails (3.0.1)
     builder (3.2.3)
     byebug (10.0.0)
@@ -122,10 +120,6 @@ GEM
     faker (1.8.7)
       i18n (>= 0.7)
     ffi (1.9.21)
-    fullcalendar-rails (3.4.0.0)
-      jquery-rails (>= 4.0.5, < 5.0.0)
-      jquery-ui-rails (>= 5.0.2)
-      momentjs-rails (>= 2.9.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     gon (6.2.0)
@@ -144,8 +138,6 @@ GEM
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (6.0.1)
-      railties (>= 3.2.16)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -163,8 +155,6 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    momentjs-rails (2.17.1)
-      railties (>= 3.1)
     multi_json (1.13.1)
     multi_xml (0.6.0)
     mysql2 (0.4.10)
@@ -291,7 +281,6 @@ PLATFORMS
 DEPENDENCIES
   aasm
   bootstrap-sass
-  bootstrap3-datetimepicker-rails (= 4.17.37)
   breadcrumbs_on_rails
   byebug
   cancancan
@@ -300,13 +289,11 @@ DEPENDENCIES
   config
   devise
   faker
-  fullcalendar-rails
   gon
   httparty
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
-  momentjs-rails
   mysql2 (>= 0.3.18, < 0.5)
   paperclip
   pry-rails

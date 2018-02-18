@@ -6,30 +6,36 @@
 					<span></span>
 				</div>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item <%= selected_link 'home/index' %> ">
+				<%= link_to root_path, class: "nav-link" do %> 
+				<i class="fal fa-home"></i>
+				<span class="title">Home</span>
+				<%end%>
+			</li>
+			<li class="nav-item <%= selected_link 'clients/new' or selected_link 'clients/index' %> ">
 				<%= link_to clients_path, class: "nav-link" do %> 
-				<i class="fal fa-file-alt"></i>
+				<i class="fal fa-users"></i>
 				<span class="title">Clientes</span>
 				<%end%>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item <%= selected_link 'estates/new' or selected_link 'estates/index' or selected_link 'softwares/new' or selected_link 'softwares/index' or selected_link 'positions/new' or selected_link 'positions/index' %> ">
 				<a href="javascript:;" class="nav-link nav-toggle">
 				<i class="fal fa-database"></i>
 				<span class="title">Mantenedores</span>
 				<span class="arrow"></span>
 				</a>
 				<ul class="sub-menu">
-					<li class="nav-item">
+					<li class="nav-item <%= selected_link 'estates/new' or selected_link 'estates/index' %> ">
 						<%= link_to estates_path, class: "nav-link" do %>
 						<span class="title">Inmobiliarias</span>
 						<%end%>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item <%= selected_link 'softwares/new' or selected_link 'softwares/index' %>">
 						<%= link_to softwares_path, class: "nav-link" do %>
 						<span class="title">Softwares</span>
 						<%end%>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item <%= selected_link 'positions/new' or selected_link 'positions/index' %> ">
 						<%= link_to positions_path, class: "nav-link" do %>
 						<span class="title">Cargos</span>
 						<%end%>
