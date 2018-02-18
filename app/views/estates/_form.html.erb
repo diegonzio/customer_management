@@ -1,0 +1,64 @@
+<div class="col-md-12">
+	<h1 class="page-title">
+	Inmobiliarias
+	<small></small>
+	</h1>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="well">
+		<%= form_for @estate, html: {class:"",id: "" } do |f| %>
+			<div class="form-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Nombre</label>
+							<%= f.text_field :name, class: "form-control" %>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Rut</label>
+							<%= f.text_field :web, class: "form-control" %>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Dirección</label>
+							<%= f.text_field :address, class: "form-control" %>
+						</div>
+					</div>
+					<div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Pagina Web</label>
+							<%= f.text_field :web, class: "form-control" %>	
+						</div>
+                    </div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Telefono 1</label>
+							<%= f.text_field :phone_1, class: "form-control" %>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Telefono 2</label>
+							<%= f.text_field :phone_2, class: "form-control" %>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-md-offset-9 col-md-3 text-right">
+					<%= f.submit "Guardar", class:"btn btn-success" %>
+				</div>
+			</div>
+		<%end%>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="col-md-12">
+	<h1 class="page-title">
+	Posición
+	<small></small>
+	</h1>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="well">
+		<%= form_for @position, html: {class:"",id: "" } do |f| %>
+			<div class="form-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Nombre</label>
+							<%= f.text_field :name, class: "form-control" %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-offset-9 col-md-3 text-right">
+					<%= f.submit "Guardar", class:"btn btn-success" %>
+				</div>
+			</div>
+		<%end%>
+		</div>
+	</div>
+</div>
