@@ -1,6 +1,7 @@
 class PositionsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_position, only:[:show, :update, :destroy, :edit]
+	add_breadcrumb "Inicio", :root_path
 	def index
 		add_breadcrumb "Posición", :positions_path
 		respond_to do |format|

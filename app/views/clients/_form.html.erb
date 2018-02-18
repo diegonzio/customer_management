@@ -47,7 +47,7 @@
 					<div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">Responsable</label>
-							<%= f.collection_select :responsable_id, User.all, :id, :id, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
+							<%= f.collection_select :responsable_id, User.all, :id, :name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
 						</div>
                     </div>
 				</div>
@@ -59,14 +59,6 @@
 						</div>
                     </div>
                     <div class="col-md-6">
-                        <div class="form-group">
-                            <label class="control-label">Software</label>
-							<%= f.collection_select :software_id, Software.all, :id, :name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
-						</div>
-                    </div>
-				</div>
-				<div class="row">
-					<div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">Inmobiliaria</label>
 							<%= f.collection_select :estate_id, Estate.all, :id, :name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	

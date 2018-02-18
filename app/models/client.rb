@@ -1,5 +1,5 @@
 class Client < ApplicationRecord
-  belongs_to :position
-  belongs_to :software
-  belongs_to :estate
+  belongs_to :position, optional: true
+  belongs_to :estate, optional: true
+  has_many :events
 end

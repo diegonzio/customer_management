@@ -1,6 +1,7 @@
 class ClientsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_client, only:[:show, :update, :destroy, :edit]
+	add_breadcrumb "Inicio", :root_path
 	def index
 		add_breadcrumb "Clientes", :clients_path
 		respond_to do |format|

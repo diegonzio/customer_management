@@ -8,7 +8,6 @@ class CreateClients < ActiveRecord::Migration[5.1]
       t.string :email
       t.string :responsable_id
       t.references :position, foreign_key: true
-      t.references :software, foreign_key: true
       t.references :estate, foreign_key: true
 
       t.timestamps

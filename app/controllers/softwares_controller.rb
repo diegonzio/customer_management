@@ -1,7 +1,9 @@
 class SoftwaresController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_software, only:[:show, :update, :destroy, :edit]
+	add_breadcrumb "Inicio", :root_path
 	def index
+		add_breadcrumb "Softwares", :softwares_path
 		respond_to do |format|
 			data = ['name']
 			sort = %w[id name id]
@@ -10,6 +12,7 @@ class SoftwaresController < ApplicationController
 		end
 	end
 	def new
+		add_breadcrumb "Nuevo Software", :new_software_path
 		@software = Software.new
 	end
 	def create
@@ -23,6 +26,7 @@ class SoftwaresController < ApplicationController
 	def show
 	end
 	def edit
+		add_breadcrumb "Editar Software", :edit_software_path
 	end
 	def update
 		if @software.update(software_params)

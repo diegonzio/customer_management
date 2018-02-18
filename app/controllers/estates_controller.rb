@@ -1,6 +1,7 @@
 class EstatesController < ApplicationController
 	before_action :authenticate_user!
 	before_action :set_estate, only:[:show, :update, :destroy, :edit]
+	add_breadcrumb "Inicio", :root_path
 	def index
 		add_breadcrumb "Inmobiliarias", :estates_path
 		respond_to do |format|
@@ -48,6 +49,6 @@ class EstatesController < ApplicationController
 			@estate = Estate.find(params[:id])
 		end
 		def estate_params
-			params.require(:estate).permit(:name, :address, :web, :phone_1, :phone_2)
+			params.require(:estate).permit(:name, :address, :web, :phone_1, :phone_2, :commune_id, :software_id)
 		end
 end

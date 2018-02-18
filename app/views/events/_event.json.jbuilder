@@ -5,7 +5,7 @@ json.title event.title
 json.start event.start.strftime(date_format)
 json.end event.end.strftime(date_format)
 
-json.color event.color unless event.color.blank?
+json.color_id event.color_id unless event.color.name.blank?
 json.allDay event.all_day_event? ? true : false
 
 json.update_url event_path(event, method: :patch)
