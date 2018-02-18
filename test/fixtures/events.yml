@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyText
+  date_range: 2018-02-18 16:02:04
+  start: 2018-02-18 16:02:04
+  end: 2018-02-18 16:02:04
+  color: MyString
+
+two:
+  title: MyText
+  date_range: 2018-02-18 16:02:04
+  start: 2018-02-18 16:02:04
+  end: 2018-02-18 16:02:04
+  color: MyString

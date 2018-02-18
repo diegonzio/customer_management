@@ -22,10 +22,10 @@
  *= require dataTables/dataTables.bootstrap4
  *= require dataTables/responsive.bootstrap4
  *= require sweetalert
- *= require bootstrap-datetimepicker
- *= require bootstrap-datepicker.min
  *= require select2/select2
  *= require select2/select2-bootstrap
+ *= require fullcalendar
+ *= require daterangepicker
  *= require_tree .
  *= require_self
  */
