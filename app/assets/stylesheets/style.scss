@@ -3,6 +3,17 @@
 }
 .panel-default > .panel-heading {
     color: #ffffff;
-    background-color: #1893AA;
-    border-color: #1893AA;
+    background-color: #00B9C8;
+    border-color: #00B9C8;
+}
+.page-header.navbar {
+    background-color: #2093aa;
+}
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a, .page-sidebar .page-sidebar-menu > li.active > a, .page-sidebar .page-sidebar-menu > li.active.open > a {
+    background: #6FCBD3;
+    border-top-color: transparent;
+    color: #ffffff;
+}
+.page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active > a:hover, .page-sidebar-closed.page-sidebar-fixed .page-sidebar:hover .page-sidebar-menu > li.active.open > a:hover, .page-sidebar .page-sidebar-menu > li.active > a:hover, .page-sidebar .page-sidebar-menu > li.active.open > a:hover {
+    background: #6FCBD3;
 }

@@ -47,7 +47,7 @@
 					<div class="col-md-6">
                         <div class="form-group">
                             <label class="control-label">Responsable</label>
-							<%= f.collection_select :responsable_id, User.all, :id, :name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
+							<%= f.collection_select :responsable_id, User.all, :id, :complete_name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>	
 						</div>
                     </div>
 				</div>

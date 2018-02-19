@@ -18,7 +18,7 @@
 		<div class="col-md-6">
 			<div class="form-group">
 			<label>Cliente</label>
-			<%= f.collection_select :client_id, Client.all, :id, :name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>
+			<%= f.collection_select :client_id, Client.all, :id, :complete_name, {prompt: "Seleccionar"}, class: "form-control select2-multiple" %>
 			</div>
 		</div>
 		<div class="col-md-6">
@@ -42,6 +42,6 @@
 <div class="form-actions">
 	<button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Cerrar</button>
 	<%= f.submit "Guardar", class:"btn btn-success" %>
-    <%= link_to 'Delete', event, method: :delete, class: 'btn btn-danger', data: { confirm: 'Estas Seguro?' }, remote: true unless @event.new_record? %>
+    <%= link_to 'Borrar', event, method: :delete, class: 'btn btn-danger', data: { confirm: 'Estas Seguro?' }, remote: true unless @event.new_record? %>
 </div>
 <% end %>

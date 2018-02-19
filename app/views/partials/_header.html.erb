@@ -2,8 +2,8 @@
 	<div class="page-header-inner ">
 		<!-- LOGO -->
 		<div class="page-logo">
-			<%= link_to root_path do %>
-				
+			<%= link_to root_path do %>			
+					<%= image_tag "logo_sombra", height: 35, class: "logo-default", style:"margin-top:10px"%>
 			<%end%>
 			<div class="menu-toggler sidebar-toggler">
 				<span></span>
@@ -23,7 +23,11 @@
 				<!-- END NOTIFICATIONS -->
 				<!-- USER LOGIN DROPDOWN -->
 				<li class="dropdown dropdown-user">
-				
+					<a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+						<%= image_tag "avatar.png", class: "img-circle" %>
+						<span class="username username-hide-on-mobile"> <%= current_user.name %></span>
+						<i class="fal fa-chevron-down"></i>
+					</a>
 					<ul class="dropdown-menu dropdown-menu-default">
 						<li>
 							<%= link_to destroy_user_session_path, method: :delete do %><i class="fal fa-key"></i> Cerrar Sesión<% end %>

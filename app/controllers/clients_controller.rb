@@ -26,7 +26,7 @@ class ClientsController < ApplicationController
 	def show
 	end
 	def edit
-		add_breadcrumb "Editar Cliente", :new_client_path
+		add_breadcrumb "Editar Cliente", :edit_client_path
 	end
 	def update
 		if @client.update(client_params)

@@ -12,8 +12,8 @@ software = Software.create!([
 {id: '2', name: 'Edigrafh'}
 ])
 estate = Estate.create!([
-{id: '1', name: 'Absalon'},
-{id: '2', name: 'Impulsa'}
+{id: '1', name: 'Absalon', web: 'www.absalon.cl', 'Las Condes', 'Edigrafh'},
+{id: '2', name: 'Impulsa', web: 'www.impulsa.cl', 'Las Condes', 'Plan OK'},
 ])
 color = Color.create!([
 {id: '1', name: 'black'},
