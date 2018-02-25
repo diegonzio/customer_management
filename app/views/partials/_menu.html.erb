@@ -13,8 +13,8 @@
 				<%end%>
 			</li>
 			<li class="nav-item ">
-				<%= link_to clients_path, class: "nav-link" do %> 
-				<i class="fal fa-users"></i>
+				<%= link_to processes_path, class: "nav-link" do %> 
+				<i class="fal fa-coffee"></i>
 				<span class="title">Seguimiento</span>
 				<%end%>
 			</li>
@@ -24,18 +24,19 @@
 				<span class="title">Clientes</span>
 				<%end%>
 			</li>
-			<li class="nav-item <%= selected_link 'estates/new' or selected_link 'estates/index' or selected_link 'softwares/new' or selected_link 'softwares/index' or selected_link 'positions/new' or selected_link 'positions/index' %> ">
+			<li class="nav-item <%= selected_link 'estates/new' or selected_link 'estates/index' %> ">
+				<%= link_to estates_path, class: "nav-link" do %> 
+				<i class="fal fa-building"></i>
+				<span class="title">Inmobiliarias</span>
+				<%end%>
+			</li>
+			<li class="nav-item <%= selected_link 'softwares/new' or selected_link 'softwares/index' or selected_link 'positions/new' or selected_link 'positions/index' %> ">
 				<a href="javascript:;" class="nav-link nav-toggle">
 				<i class="fal fa-database"></i>
 				<span class="title">Mantenedores</span>
 				<span class="arrow"></span>
 				</a>
 				<ul class="sub-menu">
-					<li class="nav-item <%= selected_link 'estates/new' or selected_link 'estates/index' %> ">
-						<%= link_to estates_path, class: "nav-link" do %>
-						<span class="title">Inmobiliarias</span>
-						<%end%>
-					</li>
 					<li class="nav-item <%= selected_link 'softwares/new' or selected_link 'softwares/index' %>">
 						<%= link_to softwares_path, class: "nav-link" do %>
 						<span class="title">Softwares</span>

@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 	resources :softwares
 	resources :estates
 	resources :events
+	resources :processes
 end

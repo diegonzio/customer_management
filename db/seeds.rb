@@ -1,37 +1,4 @@
-activity_type = ActivityType.create!([
-{id: '1', name: 'Llamada'},
-{id: '2', name: 'Reunión'},
-{id: '3', name: 'Correo Electrónico'}
-])
-position = Position.create!([
-{id: '1', name: 'Gerente General'},
-{id: '2', name: 'Gerente Comercial'}
-])
-software = Software.create!([
-{id: '1', name: 'Plan OK'},
-{id: '2', name: 'Edigrafh'}
-])
-estate = Estate.create!([
-{id: '1', name: 'Absalon', web: 'www.absalon.cl', 'Las Condes', 'Edigrafh'},
-{id: '2', name: 'Impulsa', web: 'www.impulsa.cl', 'Las Condes', 'Plan OK'},
-])
-color = Color.create!([
-{id: '1', name: 'black'},
-{id: '2', name: 'red'},
-{id: '3', name: 'green'}
-])
-stage = Stage.create!([
-{id: '1', name: 'Contacto Establecido'},
-{id: '2', name: 'Demo Programada'},
-{id: '3', name: 'Propuesta'},
-{id: '4', name: 'Negociación'},
-])
-users = User.create!([
-{email: "admin@apptec.cl", password:"demodemo",password_confirmation:"demodemo", name: "Admin", lastname: "Apptec"}
-])
-country = Country.create!([
-{id: '1' ,name: 'Chile'}
-])
+
 
 region = Region.create!([
 {id: '1' ,name: 'Región de Los Ríos', country_id: '1'},
@@ -397,4 +364,40 @@ commune = Commune.create!([
 {"id":"343","name":"Yumbel","region_id":"35","created_at":"2016-09-07 20:49:51","updated_at":"2016-09-07 20:49:51"},
 {"id":"344","name":"Yungay","region_id":"37","created_at":"2016-09-07 20:49:51","updated_at":"2016-09-07 20:49:51"},
 {"id":"345","name":"Zapallar","region_id":"16","created_at":"2016-09-07 20:49:50","updated_at":"2016-09-07 20:49:50"}
+])
+
+users = User.create!([
+{email: "admin@apptec.cl", password:"demodemo",password_confirmation:"demodemo", name: "Admin", lastname: "Apptec"}
+])
+activity_type = ActivityType.create!([
+{id: '1', name: 'Llamada'},
+{id: '2', name: 'Reunión'},
+{id: '3', name: 'Correo Electrónico'}
+])
+position = Position.create!([
+{id: '1', name: 'Gerente General'},
+{id: '2', name: 'Gerente Comercial'}
+])
+software = Software.create!([
+{id: '1', name: 'Plan OK'},
+{id: '2', name: 'Edigrafh'},
+{id: '3', name: 'Mobysuite'}
+])
+estate = Estate.create!([
+{id: '1', name: 'Absalon', web: 'www.absalon.cl', commune_id: '6', software_id: '3'},
+{id: '2', name: 'Impulsa', web: 'www.impulsa.cl', commune_id: '8', software_id: '2'},
+])
+color = Color.create!([
+{id: '1', name: 'black'},
+{id: '2', name: 'red'},
+{id: '3', name: 'green'}
+])
+stage = Stage.create!([
+{id: '1', name: 'Contacto Establecido'},
+{id: '2', name: 'Demo Programada'},
+{id: '3', name: 'Propuesta'},
+{id: '4', name: 'Negociación'},
+])
+country = Country.create!([
+{id: '1' ,name: 'Chile'}
 ])
